@@ -13,6 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
+import { verifyCredentials } from './redux-token-auth-config'
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
@@ -42,9 +43,20 @@ openSansObserver.load().then(() => {
 });
 
 // Create redux store with history
-const initialState = {};
+const initialState = {
+  reduxTokenAuth: {
+    currentUser: {
+      isLoading: false,
+      isSignedIn: false,
+      attributes: {
+        name: null,
+      },
+    },
+  },
+};
 const history = createHistory();
 const store = configureStore(initialState, history);
+verifyCredentials(store)
 const MOUNT_NODE = document.getElementById('app');
 
 const render = () => {

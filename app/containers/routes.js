@@ -7,10 +7,15 @@ import RegisterPage from 'containers/RegisterPage/Loadable';
 import AccountPage from 'containers/AccountPage/Loadable';
 import DashboardPage from 'containers/DashboardPage/Loadable';
 import LitterPage from 'containers/LitterPage/Loadable';
+import { generateRequireSignInWrapper } from 'redux-token-auth'
+
+const requireSignIn = generateRequireSignInWrapper({
+  redirectPathIfNotSignedIn: '/signin',
+})
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={HomePage} />
+    <Route exact path="/" component={ requireSignIn(HomePage) } />
     <Route exact path="/login" component={LoginPage} />
     <Route exact path="/register" component={RegisterPage} />
     <Route exact path="/account" component={AccountPage} />
