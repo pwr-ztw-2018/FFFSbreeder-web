@@ -6,6 +6,7 @@ import LoginPage from 'containers/LoginPage/Loadable';
 import RegisterPage from 'containers/RegisterPage/Loadable';
 import AccountPage from 'containers/AccountPage/Loadable';
 import DashboardPage from 'containers/DashboardPage/Loadable';
+import LitterPage from 'containers/LitterPage/Loadable';
 
 const Routes = () => (
   <Switch>
@@ -14,6 +15,7 @@ const Routes = () => (
     <Route exact path="/register" component={RegisterPage} />
     <Route exact path="/account" component={AccountPage} />
     <Route exact path="/dashboard" component={DashboardPage} />
+    <Route exact path="/litter/:id" component={LitterPage} />
     <Route path="" component={NotFoundPage} />
   </Switch>
 );

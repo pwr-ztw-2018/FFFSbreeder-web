@@ -1,0 +1,44 @@
+.litter {
+
+  section {
+    margin: 1em auto 2em;
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 1em;
+    }
+
+    hr {
+      background: gray;
+      height: 1px;
+    }
+
+    .parents {
+        padding-top: 0!important;
+    }
+
+    .litter-tile {
+      cursor: pointer;
+
+      img {
+        height: 50px;
+        width: 50px;
+      }
+
+      i {
+        margin-left: 5px;
+      }
+    }
+
+    .children {
+      flex-wrap: wrap;
+    }
+
+    .plus-btn {
+      display: flex;
+      margin: auto;
+      align-self: center;
+    }
+
+  }
+}
