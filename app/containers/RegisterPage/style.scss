@@ -1,0 +1,23 @@
+.register {
+
+  section {
+    margin: 3em auto;
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.25em;
+    }
+
+    .form {
+      width: 50%;
+      margin: 3em auto;
+      display: flex;
+      flex-direction: column;
+
+      .button {
+        width: 50%;
+        margin: 1em auto;
+      }
+    }
+  }
+}
