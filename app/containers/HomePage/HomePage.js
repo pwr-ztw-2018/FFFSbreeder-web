@@ -21,7 +21,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
    * when initial state username is not null, submit the form to load repos
    */
   componentDidMount() {
-    this.fetchMessage()
+    // this.fetchMessage()
     if (this.props.username && this.props.username.trim().length > 0) {
       this.props.onSubmitForm();
     }

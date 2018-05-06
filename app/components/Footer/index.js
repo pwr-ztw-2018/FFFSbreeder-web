@@ -3,8 +3,7 @@ import './style.scss';
 
 const Footer = () => (
   <footer>
-    <section></section>
-    <section>wersja 0.0.1</section>
+    <section className="is-pulled-right">wersja 0.0.1</section>
   </footer>
 );
 
