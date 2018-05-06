@@ -1,0 +1,33 @@
+.account {
+
+  section {
+    margin: 3em auto;
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.25em;
+    }
+
+    .form {
+      width: 80%;
+      margin: 3em auto;
+      display: flex;
+      flex-direction: column;
+
+      .columns {
+        margin-right: 50px;
+      }
+
+      .label {
+        align-self: center;
+        font-weight: 500;
+      }
+
+      .button {
+        width: 50%;
+        margin: 1em auto;
+      }
+
+    }
+  }
+}
