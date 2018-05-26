@@ -5,6 +5,8 @@
 import { fromJS } from 'immutable';
 import { combineReducers } from 'redux-immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
+import { reduxTokenAuthReducer } from 'redux-token-auth'
+
 
 import globalReducer from 'containers/App/reducer';
 
@@ -43,6 +45,7 @@ export default function createReducer(injectedReducers) {
   return combineReducers({
     route: routeReducer,
     global: globalReducer,
+    reduxTokenAuth: reduxTokenAuthReducer,
     ...injectedReducers,
   });
 }
